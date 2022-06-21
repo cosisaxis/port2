@@ -29,7 +29,7 @@ body::-webkit-scrollbar {
 }
 
 ul {
-  list-style-type: none;
+  
 }
 
 a {
@@ -104,6 +104,7 @@ a {
   display: flex;
   flex-direction: column;
   row-gap: 1.5rem;
+  list-style-type: none;
 }
 
 .navbar-link {
@@ -155,4 +156,143 @@ a {
   display: flex;
   align-items: center;
   margin-top: 1.5rem;
+}
+
+/* experience */
+.experience{
+  height: 100%;
+  padding-top: 60px;
+  padding-bottom: 80px;
+}
+
+.experience h3{
+  font-weight: 300;
+  letter-spacing: .2rem;
+}
+
+.experiences{
+  position: relative;
+  width: 100%;
+  color: rgba(48, 69, 91, 1);
+}
+
+.experiences section{
+  display: block;
+  width: 100%;
+  left: 0;
+}
+
+.experience section input[name="sections"]{
+  left: -9999px;
+  position:absolute;
+}
+
+.experiences section input[name="sections"]:checked + label{
+  background-color: #1f1e1e;
+  color: #ffffff;
+  border:2px solid #ffffff;
+}
+
+.experiences section input[name="sections"]:checked ~ article{
+  display: block;
+}
+
+.experiences section label{
+  font-family: var(--font-primary);
+  color: #ffffff;
+  font-weight: 300;
+  cursor: pointer;
+  display: block;
+  letter-spacing: .1rem;
+  font-size: 1.2rem;
+  padding: 1rem  0.83rem;
+  position: relative;
+  width: 100%;
+  z-index: 100;
+  border: 2px solid #1f1e1e;
+}
+
+.experiences section article{
+  display: none;
+  left:0;
+  width: 100%;
+  position:relative;
+  top:0;
+  font-family: var(--font-primary);
+  font-weight: 300;
+  line-height: 1.7;
+  padding:2rem 0;
+}
+
+.experiences section article ul li{
+  font-weight: 300;
+  font-size: 16px;
+  color: #c4c4c4de;
+  list-style: disc;
+  list-style-position: inside;
+
+}
+
+.experiences section article > p{
+  color: #6cace4;
+  font-weight: 300;
+  font-size: 14px;
+  margin: 16px 0 16px 0;
+  letter-spacing: 1px;
+  opacity: .8;
+}
+
+.title-experience{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.title-experience h2{
+  color: #fff;
+}
+
+.experiences section article:after{
+  background-color: transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  left:-229;
+  position: absolute;
+  top:0;
+  width: 220px;
+  z-index: 1;
+}
+
+
+
+
+
+@media screen and (min-width: 767px){
+  .container, .container-medium{
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .navbar{
+    height: 5rem;
+  }
+
+  .navbar-toggle, .navbar-close{
+    display: none;
+  }
+  .navbar-list{
+    flex-direction: row;
+    column-gap: 3rem;
+  }
+  .navbar-menu{
+    margin-left: auto;
+  }
+  .hero-section{
+    display: block;
+    padding: 13rem  0;
+  }
+  .hero-section p{
+    font-size: 1rem;
+    text-align: justify;
+  }
 }
