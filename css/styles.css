@@ -264,9 +264,50 @@ a {
   z-index: 1;
 }
 
+/* projects */
 
+.featured .container-medium hr{
+  border-color: #6cace4;
+  margin-bottom: 50px;
+}
 
+.featured h4{
+  font-family: var(--font-main);
+  font-weight: 300;
+  text-transform: uppercase;
+}
 
+.featured-box{
+  margin-top: 30px;
+  display: grid;
+  gap: 20px 20px;
+}
+ .featured-box .project img{
+  width: 100%;
+  height: auto;
+ }
+.project-head{
+  margin-top: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.project-head h3{
+  font-family: var(--font-main);
+  font-weight: 400;
+  letter-spacing: 1px;
+  width: 80%;
+}
+.featured-box .project p{
+  margin-top: 10px;
+  font-weight: 300;
+  font-size: 14px;
+  letter-spacing: .05rem;
+  line-height: 1.3rem;
+}
+.featured-box .project .tech{
+  color: #b22222;
+}
 
 @media screen and (min-width: 767px){
   .container, .container-medium{
@@ -294,5 +335,57 @@ a {
   .hero-section p{
     font-size: 1rem;
     text-align: justify;
+  }
+  /* experiences */
+  .experiences{
+    width: 100%;
+    color: rgba(48, 69, 92,1);
+    margin-top: 3rem;
+  }
+
+  .experiences section label{
+    border-color: #1f1e1e;
+    border-style: solid;
+    border-width: 0 0 0 2px;
+    width: 20%;
+  }
+
+  .experiences section label:hover span{
+    transition: all .3s ease-in-out;
+  }
+
+  .experiences section label:hover span{
+    margin-left: 6px;
+  }
+
+  .experiences section input[name="sections"]:checked + label{
+    background-color: #1f1e1e;
+    color: #ffffff;
+    border-style: solid;
+    border-width: 0 0 0 2px;
+  }
+
+  .experiences section article{
+    position: absolute;
+    width: 70%;
+    left:26.5%;
+    padding: 0;
+  }
+
+  .title-experience{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .featured-box{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .project img{
+    transition: all .3s ease-in-out;
+  }
+
+  .project:hover img{
+    transform: scale(1.02)
   }
 }
