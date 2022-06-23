@@ -31,6 +31,10 @@ body::-webkit-scrollbar {
 ul {
   
 }
+.test1{
+  cursor: pointer;
+  padding: 20px;
+}
 
 a {
   text-decoration: none;
@@ -123,10 +127,12 @@ a {
   right: 0;
 }
 
+
+
 .hero-section {
   background-color: #000;
   position: relative;
-  z-index: -1;
+  z-index: 1;
   padding: 6rem 0;
   display: flex;
   align-items: center;
@@ -406,7 +412,7 @@ footer .contact-box{
   /* experiences */
   .experiences{
     width: 100%;
-    color: #880808;
+    color: #D70040;
     margin-top: 3rem;
   }
 
